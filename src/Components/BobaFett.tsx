@@ -23,9 +23,9 @@ export default function BobaFett() {
             const response = await fetch(filmList);
             if (!response.ok) throw new Error("Failed to fetch film");
             const filmData = await response.json();
-            filmTitles.push(filmData.title); // Add film title to the array
+            filmTitles.push(filmData.title);
           }
-          setFilms(filmTitles); // Update state with film titles
+          setFilms(filmTitles);
         }
       } catch (error) {
         console.error(error);

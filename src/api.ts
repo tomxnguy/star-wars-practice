@@ -16,7 +16,7 @@ export async function readHomeworld(url: string) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Unable to retrive data");
+      throw new Error("failed to fetch data");
     }
     const homeworld = await response.json();
     return homeworld.name;
